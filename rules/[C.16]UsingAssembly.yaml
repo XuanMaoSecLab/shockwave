@@ -1,0 +1,17 @@
+description:
+ name: Using assembly
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: fetch assembly {
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*assembly ?\{.*

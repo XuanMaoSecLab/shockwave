@@ -1,0 +1,17 @@
+description:
+ name: Deleting arrays by assigning their length to zero
+ ver: 1
+ done: check .length = 0
+ todo: 
+0:
+  method: regex
+  usage: check \.length = 0
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*\.length = 0.*

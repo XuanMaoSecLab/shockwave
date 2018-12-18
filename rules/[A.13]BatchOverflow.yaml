@@ -1,0 +1,17 @@
+description:
+ name: BatchOverflow
+ ver: 1
+ done: check if there is BatchOverflow
+ todo: 
+0:
+  method: regex
+  usage: check BatchOverflow
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*\=.*\* (_value|_amount).*

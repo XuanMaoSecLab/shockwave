@@ -1,0 +1,17 @@
+description:
+ name: OwnerUnderflow
+ ver: 1
+ done: check if there is OwnerUnderflow
+ todo: 
+0:
+  method: regex
+  usage: check address[owner] -= and all address[i] +=
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*-=.*\n.*addresses\[i\].*

@@ -1,0 +1,17 @@
+description:
+ name: call injection
+ ver: 1
+ done: find call with data
+ todo: 
+0:
+  method: regex
+  usage: call data
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*[^\)]\.call.*data.*

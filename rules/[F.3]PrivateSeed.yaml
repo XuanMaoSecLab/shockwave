@@ -1,0 +1,17 @@
+description:
+ name: Private Seed
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: Private Seed
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: private (\w+?);[\s\S]*?block\.blockhash.*\1.*

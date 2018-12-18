@@ -1,0 +1,17 @@
+description:
+ name: Unchecked External-Call
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: check for send and call without if/require/assert
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: ^((?!//)(?!if)(?!require)(?!assert).)*\.(send|call)\(.*

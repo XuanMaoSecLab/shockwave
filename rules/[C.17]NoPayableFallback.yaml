@@ -1,0 +1,17 @@
+description:
+ name: No payable fallback function
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: fetch no payable fallback
+  factor:
+   - M
+   - I
+   - S
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: function ?\(((?!payable).)*?\{

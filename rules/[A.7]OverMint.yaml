@@ -1,0 +1,14 @@
+description:
+ name: UnderSell
+ ver: 1
+ done: check if there is UnderSell
+ todo: 
+0:
+  method: match
+  usage: just match
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: 
+   - msg.sender.transfer(amount * sellPrice);

@@ -1,0 +1,16 @@
+description:
+ name: Transfer forwards all gas
+ ver: 1
+ done:
+ todo: 
+0:
+  method: regex
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*\.call\.value\(\)\(.*

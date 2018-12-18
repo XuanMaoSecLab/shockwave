@@ -1,0 +1,17 @@
+description:
+ name: OverflowafterFor
+ ver: 1
+ done: check if there is OverflowafterFor
+ todo: add rule more than i and j
+0:
+  method: regex
+  usage: check += and [i]
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*\+\=.*\[(i|j)\].*

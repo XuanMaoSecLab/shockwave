@@ -1,0 +1,27 @@
+description:
+ name: Byte Array
+ ver: 1
+ done: check if there is byte[]
+ todo: 
+0:
+  method: regex
+  usage: check byte[]
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: next
+    False: fail
+  rule: .*byte\[\].*
+1:
+  method: match
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule:
+   - "/*"
+   - "//"
+   - "@dev"

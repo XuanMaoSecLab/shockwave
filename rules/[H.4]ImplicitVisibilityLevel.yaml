@@ -1,0 +1,17 @@
+description:
+ name: Implicit visibility level
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: not match them
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: function((?!public)(?!internal)(?!view)(?!private)(?!constant)(?!payable)(?!external).)*\{[^\}]

@@ -1,0 +1,26 @@
+description:
+ name: MintAny
+ ver: 1
+ done: check if there is MintAny
+ todo: 
+0:
+  method: regex
+  usage: mintToken function
+  factor:
+   - M
+   - I
+   - S
+  fetch: True
+  match:
+    True: next
+    False: fail
+  rule: function mintToken.*?\}
+1:
+  method: match
+  usage: check +=
+  fetch: False
+  match:
+    True: success
+    False: fail
+  rule: 
+    - +=

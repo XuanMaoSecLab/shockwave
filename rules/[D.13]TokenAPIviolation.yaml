@@ -1,0 +1,16 @@
+description:
+ name: Token API violation
+ ver: 1
+ done: equal to zero
+ todo: return bool
+0:
+  method: regex
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: function transfer((?!//)(?!\})[\s\S])*?(> ?0|0 ?<[^=])

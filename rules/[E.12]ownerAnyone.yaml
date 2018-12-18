@@ -1,0 +1,17 @@
+description:
+ name: ownerAnyone
+ ver: 1
+ done: find setOwner without check
+ todo: 
+0:
+  method: regex
+  usage: setOwner
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: ^ +function setOwner((?!if)(?!require)(?!assert)(?!revert)(?!onlyowner)(?!isCreator)[\s\S])*?\}

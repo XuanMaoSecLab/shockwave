@@ -1,0 +1,17 @@
+description:
+ name: Transfer&TransferFrom Lack of Throwing Exceptions
+ ver: 1
+ done: function return true or false
+ todo: 
+0:
+  method: regex
+  usage: check for return true
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: function (transfer|transferfrom) ?\(.*\{\n((?!\{)(?!transfer)(?!require)(?!assert)(?!\.add)(?!safe)(?!sub)(?!revert)(?!throw)[\s\S])*?[^{]\}

@@ -1,0 +1,27 @@
+description:
+ name: Hardcoded Address
+ ver: 1
+ done: check if there is Hardcoded Address
+ todo: 
+0:
+  method: regex
+  usage: check Address
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: next
+    False: fail
+  rule: .*0x[0-9a-z]{42}.*
+1:
+  method: match
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule:
+   - "/*"
+   - "//"
+   - "@dev"

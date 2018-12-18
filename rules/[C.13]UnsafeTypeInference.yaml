@@ -1,0 +1,26 @@
+description:
+ name: Unsafe type inference
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: fetch for and var
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: next
+    False: fail
+  rule: .*for.*var.*\+\+.*
+1:
+  method: match
+  usage: comment
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule:
+   - "//"

@@ -1,0 +1,14 @@
+description:
+ name: Use tx.origin for authorization
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: match
+  usage: just match tx.origin
+  fetch: False
+  match:
+    True: success
+    False: fail
+  rule:
+   - "tx.origin"

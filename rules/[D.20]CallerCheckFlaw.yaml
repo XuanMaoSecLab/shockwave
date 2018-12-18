@@ -1,0 +1,16 @@
+description:
+ name: Caller Check Flaw
+ ver: 1
+ done:
+ todo: 
+0:
+  method: regex
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: modifier ((?!\})(?!function)[\s\S])*?assembly((?!\})(?!function)[\s\S])*?extcodesize[\s\S]*?\}[\s\S]*?\}

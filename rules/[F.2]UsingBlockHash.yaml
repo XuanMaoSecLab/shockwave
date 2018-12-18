@@ -1,0 +1,14 @@
+description:
+ name: Using block hash
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: match
+  usage: just find it
+  fetch: False
+  match:
+    True: success
+    False: fail
+  rule:
+    - block.blockhash

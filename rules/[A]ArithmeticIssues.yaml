@@ -1,0 +1,17 @@
+description:
+ name: Arithmetic Issues
+ ver: 1
+ done: check if there is safemath
+ todo: 
+0:
+  method: regex
+  usage: check safemath
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule: .*(contract|library) safemath.*

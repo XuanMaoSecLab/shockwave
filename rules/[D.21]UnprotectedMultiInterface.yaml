@@ -1,0 +1,17 @@
+description:
+ name: Unprotected Multi Interface
+ ver: 1
+ done: find import
+ todo: 
+0:
+  method: regex
+  usage: find import
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: ^((?!//)(?!/\*)(?!\*).)*?import +'.*

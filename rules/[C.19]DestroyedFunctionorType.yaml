@@ -1,0 +1,16 @@
+description:
+ name: Use of Destroyed Function or Type
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: match
+  fetch: False
+  match:
+    True: success
+    False: fail
+  rule:
+   - "throw"
+   - "suicide"
+   - "sha3"
+   - "constant"

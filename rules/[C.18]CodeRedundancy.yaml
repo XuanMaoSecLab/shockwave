@@ -1,0 +1,29 @@
+description:
+ name: Code Redundancy
+ ver: 1
+ done: uint
+ todo: other
+0:
+  method: regex
+  usage: fetch uint >= 0
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: next
+  rule: function.*uint ?([a-z_])((?!\})[\s\S])*?\1 ?>=? ?0.*
+1:
+  method: regex
+  usage: fetch 0 <= uint
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: function.*uint ?([a-z_])((?!\})[\s\S])*?0 ?<=? ?\1.*

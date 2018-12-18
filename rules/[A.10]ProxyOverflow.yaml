@@ -1,0 +1,17 @@
+description:
+ name: ProxyOverflow
+ ver: 1
+ done: check if there is ProxyOverflow
+ todo: 
+0:
+  method: regex
+  usage: check ProxyOverflow
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: .*balances.*<.*_fee.*\+.*_value.*

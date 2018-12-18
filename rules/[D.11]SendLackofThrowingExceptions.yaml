@@ -1,0 +1,16 @@
+description:
+ name: Send Lack of Throwing Exceptions
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: ^((?!\/)(?!assert)(?!isSent)(?!=)(?!require)(?!if).)*\.send\..*$

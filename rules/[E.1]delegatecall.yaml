@@ -1,0 +1,17 @@
+description:
+ name: delegatecall
+ ver: 1
+ done: find delegatecall
+ todo: 
+0:
+  method: regex
+  usage: just match delegatecall
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: ^((?!\*)(?!//).)*delegatecall\(.*

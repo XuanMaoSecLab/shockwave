@@ -1,0 +1,14 @@
+description:
+ name: transferFlaw
+ ver: 1
+ done: check if there is transferFlaw
+ todo: 
+0:
+  method: match
+  usage: just match it
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule:
+   - if (sufficientFunds && sufficientAllowance && !overflowed) {

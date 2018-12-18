@@ -1,0 +1,28 @@
+description:
+ name: Information Exposure
+ ver: 1
+ done: check if there is Information Exposure
+ todo: 
+0:
+  method: regex
+  usage: check private
+  factor:
+   - 0
+   - I
+   - 0
+  fetch: True
+  match:
+    True: next
+    False: fail
+  rule: .* private .*
+1:
+  method: match
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule:
+   - "{"
+   - "/*"
+   - "//"
+   - "@dev"

@@ -1,0 +1,30 @@
+description:
+ name: Using block variables
+ ver: 1
+ done: most
+ todo: none
+0:
+  method: match
+  usage: find then first
+  fetch: False
+  match:
+    True: next
+    False: fail
+  rule:
+    - block.number
+    - block.coinbase
+    - block.difficulty
+    - block.gaslimit
+    - block.number
+    - block.timestamp
+1:
+  method: match
+  usage: find rand and seed
+  fetch: False
+  match:
+    True: success
+    False: fail
+  rule:
+    - rand
+    - seed
+    - hash

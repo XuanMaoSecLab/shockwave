@@ -1,0 +1,28 @@
+description:
+ name: Lack Pause
+ ver: 1
+ done: Lack Pause
+ todo: 
+0:
+  method: regex
+  usage: find pasusable contract
+  factor:
+   - M
+   - I
+   - 0
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule: ^((?!//)(?!\*).)*Pausable.*
+1:
+  method: match
+  usage: find pause
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule:
+    - Paused
+    - notPaused
+    - stopped

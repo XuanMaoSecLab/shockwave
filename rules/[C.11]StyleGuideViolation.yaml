@@ -1,0 +1,28 @@
+description:
+ name: Style guide violation
+ ver: 1
+ done: 
+ todo: 
+0:
+  method: regex
+  usage: check function
+  factor:
+   - 0
+   - 0
+   - 0
+  fetch: True
+  match:
+    True: next
+    False: fail
+  rule: (.*function [A-Z].*\{)|(.*event [a-z].*)
+1:
+  method: match
+  fetch: False
+  match:
+    True: fail
+    False: success
+  rule:
+   - "*"
+   - "/*"
+   - "//"
+   - "@dev"

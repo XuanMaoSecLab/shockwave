@@ -1,0 +1,17 @@
+description:
+ name: TradeTrap:OverToken by Owner
+ ver: 1
+ done: find mint function
+ todo: 
+0:
+  method: regex
+  usage: find mint function with += and add
+  factor:
+   - M
+   - I
+   - 0
+  fetch: True
+  match:
+    True: success
+    False: fail
+  rule: ^ +function mint((?!function)(?!require)(?!if)(?!assert)(?!sub)[\s\S])*?(\+=|add[^r]).*
